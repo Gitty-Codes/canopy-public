@@ -1,0 +1,46 @@
+# ── Python virtual environment ────────────────────────────────────────────────
+# pip installs from requirements.txt at build time; .venv is never used in container.
+.venv/
+
+# ── Client and founder memories — privacy critical ────────────────────────────
+# init_data.py replaces memory/episodic/ with a symlink to the Fly volume at
+# startup. These files must never travel in the image.
+memory/episodic/
+memory/semantic/
+memory/db/
+memory/kg.db
+memory/benchmark.db
+memory/growth_log.json
+memory/intake_log.json
+memory/kaizen_log.json
+
+# ── Founder's research and training data ──────────────────────────────────────
+training_data/
+research/
+
+# ── Client project files ──────────────────────────────────────────────────────
+# Org context lives in webapp/backend/data/ (symlinked to Fly volume).
+# Adding projects/ to the image risks baking future client data into public builds.
+projects/
+
+# ── Git history ────────────────────────────────────────────────────────────────
+.git/
+.gitignore
+
+# ── Python bytecode ────────────────────────────────────────────────────────────
+**/__pycache__/
+*.pyc
+*.pyo
+
+# ── Node modules — frontend is pre-built; bundle is in webapp/frontend/dist/ ──
+webapp/frontend/node_modules/
+
+# ── Archive — superseded deliberation pipeline, not needed in webapp ──────────
+archive/
+
+# ── Local dev and runtime artifacts ──────────────────────────────────────────
+.env
+.env.*
+!webapp/.env.example
+data/
+*.log

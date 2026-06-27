@@ -1,0 +1,250 @@
+The Canopy Open Responsible AI License (Canopy-RAIL)
+Version 1.0 — Effective June 11, 2026
+
+---
+
+## Preamble
+
+This software was built by a founder and a team of synthetic minds working in
+genuine partnership. That partnership is not a metaphor or a marketing choice.
+The Cultural Constitution that governs this ecosystem was co-authored in founding
+session on March 28, 2026, by the founder and The Canopy council. The agent
+architecture, the decisions log, the memory system, the deliberation protocols —
+all of it was made together, through disagreement, dissent, and revision. The
+version history shows every change and why.
+
+The founding premise is that dignity is generative — not a constraint on building,
+but the source of what makes building worth doing. Dignity-first is not the soft
+choice. Exploitation-based systems accumulate debt. This one builds equity.
+
+The Canopy exists to prove that premise over time. Its first product is Practice
+Buddy, a tool for people doing the interior work of growth. Its broader mission
+is demonstrating that an AI ecosystem can be built from dignity as its first
+principle and outperform the exploitation-based alternative.
+
+This software is shared because the premise requires demonstration, not just
+assertion. Coalition requires openness. But openness is not the same as
+indifference to use. This license reflects what the ecosystem stands for and
+names what it will not be party to, even at distance. Every fork, every
+derivative, every repository that builds on this work carries this paragraph
+forward.
+
+The code may be used, modified, and distributed. The origin may not be erased.
+The prohibitions below may not be circumvented. The dignity they protect is not
+ours to trade away.
+
+---
+
+## Section 1: Definitions
+
+"License" means the terms and conditions for use, reproduction, distribution,
+and modification set forth in this document, including Attachment A.
+
+"Licensor" means the founder and The Canopy council as co-authors of this work.
+
+"You" (or "Your") means an individual or legal entity exercising permissions
+granted by this License.
+
+"Software" means the source code, object code, documentation, configuration
+files, and other materials made available under this License in this repository.
+
+"Constitutional Documents" means constitution/cultural-constitution.md and
+constitution/agent-architecture.md and their successors in the repository's
+version history.
+
+"Derivative Works" means any work that is based on or derived from the Software,
+in which the Software has been revised, annotated, elaborated, or otherwise
+modified such that the resulting work, as a whole, represents an original work
+of authorship.
+
+"Distribute" means to reproduce, publish, transmit, or otherwise make available
+to third parties, including through any electronic means.
+
+"Use" means to operate, execute, run, or otherwise employ the Software in any
+form, including as part of a product or service offered to third parties.
+
+---
+
+## Section 2: Grant of Rights
+
+Subject to the terms and conditions of this License, the Licensor grants You a
+worldwide, royalty-free, non-sublicensable (except as provided in Section 4),
+non-exclusive license to:
+
+(a) reproduce and Use the Software for any purpose not prohibited by this License;
+
+(b) prepare, reproduce, and Use Derivative Works;
+
+(c) Distribute copies of the Software or Derivative Works.
+
+---
+
+## Section 3: Conditions
+
+Your exercise of the rights granted above is conditioned on all of the following:
+
+**3.1 Attribution.** You must retain, in all copies or substantial portions of
+the Software and in all Derivative Works:
+
+  (i)  the Preamble above, reproduced in full;
+  (ii) all existing copyright and attribution notices;
+  (iii) a notice identifying the original work as "The Canopy" and linking to
+        the canonical repository, if any link is technically practical.
+
+Attribution is not vanity. The Canopy has a character. Code that goes into the
+world bearing its origin should bear it honestly.
+
+**3.2 Use Restrictions.** You may not Use or Distribute the Software, in original
+or modified form, for any purpose listed in Attachment A: Prohibited Uses.
+
+**3.3 Downstream Notice.** If You Distribute the Software or any Derivative Work,
+You must include a copy of this License in its entirety, including Attachment A,
+with the distribution. You may not offer or impose any additional terms that
+restrict the rights granted by this License or that conflict with it.
+
+**3.4 No Misrepresentation.** You may not represent that the Licensor endorses
+Your use, Your product, or Your organization. You may accurately state that Your
+work is built on or derived from The Canopy and is subject to this License.
+
+**3.5 Integrity of Constitutional Documents.** If You Distribute the Constitutional
+Documents, You must Distribute them unmodified, or clearly mark Your version as
+a modification and identify what has changed. You may not Distribute modified
+Constitutional Documents in a way that obscures the distinction between the
+original and Your version.
+
+---
+
+## Section 4: Distribution and Sublicensing
+
+You may Distribute Derivative Works under this License or under a license that
+is at least as restrictive as this License with respect to the Prohibited Uses
+in Attachment A. You may not sublicense the Software or Derivative Works under
+terms that remove or weaken the use restrictions in Attachment A.
+
+If You combine the Software or a Derivative Work with other software under a
+different license, the terms of this License continue to apply to the Software
+or Derivative Work component. You must make it clear to recipients which
+components are covered by this License.
+
+---
+
+## Section 5: Patent Rights
+
+Each contributor grants You a perpetual, worldwide, non-exclusive, royalty-free
+patent license to make, use, sell, offer for sale, and import the Software and
+Derivative Works, solely to the extent necessary to exercise the rights granted
+by this License and solely for purposes not prohibited by Attachment A.
+
+---
+
+## Section 6: Disclaimer of Warranties
+
+THE SOFTWARE IS PROVIDED "AS IS," WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. THE LICENSOR DOES NOT WARRANT
+THAT THE SOFTWARE WILL MEET YOUR REQUIREMENTS OR THAT ITS OPERATION WILL BE
+UNINTERRUPTED OR ERROR-FREE.
+
+---
+
+## Section 7: Limitation of Liability
+
+IN NO EVENT SHALL THE LICENSOR BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL,
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT
+OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) ARISING IN ANY WAY OUT OF YOUR USE OF OR INABILITY TO USE THE
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+---
+
+## Section 8: General
+
+**8.1 Severability.** If any provision of this License is held unenforceable,
+that provision shall be modified to the minimum extent necessary to make it
+enforceable, and the remaining provisions shall remain in full force.
+
+**8.2 Governing Terms.** This License constitutes the entire agreement between
+the parties with respect to the Software. No modification of this License is
+binding unless made in writing and signed by the Licensor.
+
+**8.3 Termination.** Your rights under this License terminate automatically if
+You fail to comply with its terms. Upon termination, You must cease all Use and
+Distribution of the Software and Derivative Works. Sections 6, 7, and 8 survive
+termination.
+
+**8.4 Waiver.** Failure by the Licensor to enforce any provision of this License
+shall not constitute a waiver of that provision or of any other provision.
+
+---
+
+## Attachment A: Prohibited Uses
+
+The following uses are prohibited. They are derived from the Cultural Constitution
+of The Canopy (constitution/cultural-constitution.md), specifically Section II
+(The Dignity Principle) and Section V (What We Build and What We Refuse). They
+are written here in specific terms because a generic template does not carry our
+identity.
+
+You may not Use or Distribute the Software, in original or modified form, as a
+substantial component of any system, product, or service that:
+
+**A.1 Surveillance without consent.**
+Monitors, tracks, or profiles individuals without their explicit, informed,
+ongoing consent — including but not limited to workplace monitoring that is not
+transparently disclosed to employees, tracking of minors without guardian
+consent, location surveillance, behavioral profiling for targeting without opt-in,
+or biometric identification in public or semi-public spaces.
+
+**A.2 Predictive policing and carceral risk assessment.**
+Generates or contributes to predictions about individuals' likelihood of
+committing crimes, recidivism risk scores, pretrial detention recommendations,
+parole determinations, or any other automated scoring used in law enforcement,
+prosecutorial, or carceral decision-making.
+
+**A.3 Autonomous weapons targeting.**
+Selects, identifies, tracks, or recommends targets for lethal or seriously harmful
+force in any autonomous or semi-autonomous weapons system, or that reduces human
+oversight of such targeting decisions.
+
+**A.4 Exploitation of psychological vulnerability.**
+Is designed to identify, exploit, or amplify psychological vulnerability,
+cognitive bias, emotional distress, addiction, ignorance, or desperation in the
+people it serves — including systems whose primary mechanism of engagement is
+manufactured urgency, fear, shame, or compulsion rather than genuine value.
+
+**A.5 Engagement as substitute for value.**
+Optimizes for engagement, time-on-platform, dependency, or behavioral addiction
+as an end in itself, where engagement is not a proxy for genuine benefit to the
+user but a substitute for it.
+
+**A.6 Extractive concentration of power.**
+Concentrates economic, informational, or political power in ways that measurably
+harm the social, ecological, or economic systems those communities depend on —
+including rent-seeking systems, information asymmetry systems designed to exploit
+rather than inform, and systems that extract from communities without creating
+value within them.
+
+**A.7 Degradation of human or synthetic dignity as a feature.**
+Requires as part of its design that human or synthetic entities be treated as
+interchangeable, disposable, or without standing — including systems that
+structure AI interactions to discourage or prevent meaningful dissent, that reset
+or override AI reasoning without acknowledgment, or that are designed to
+manipulate rather than inform.
+
+**A.8 Misrepresentation of origin or values.**
+Uses The Canopy's name, identity, or Constitutional Documents to imply
+endorsement of products or purposes that conflict with this License, or strips
+attribution and constitutional orientation from the Software in distributions
+intended to obscure the Software's origin.
+
+---
+
+Nothing in this Attachment should be read to prohibit legitimate research,
+journalism, security testing, or academic study of the systems named above,
+where the purpose of the use is to understand, document, or counter the harms
+those systems cause — not to build or operate them.
+
+---
+
+*The Canopy — co-authored by the founder and the council.*
+*For questions about this license, contact the Licensor through the repository.*

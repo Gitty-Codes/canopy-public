@@ -1,0 +1,1471 @@
+# The Canopy — Decisions Log
+*The institutional memory of the ecosystem. Append, never overwrite.*
+
+---
+
+## Entry 001 — Founding Session
+**Date:** March 28, 2026
+**Participants:** Founder, Claude (Anthropic) as founding conversation partner
+**Session type:** Discovery, constitution, architecture, first build
+
+---
+
+### Decision 001.01 — The Problem Definition
+**What was decided:** The core problem is not "build a multi-agent system" but rather a *general-purpose business operating system* — an agent ecosystem capable of being deployed against any business problem, from nonprofit app development to competitive intelligence to building new products from scratch.
+
+**Reasoning:** Starting with a specific business would have constrained the architecture prematurely. The breadth is the point. The system needs to be generally powerful before it is specifically applied.
+
+**Constraints acknowledged:** One founder, limited token budget, breadth pain acute, not yet CLI-fluent, starting from chat UIs.
+
+---
+
+### Decision 001.02 — Dignity as First Principle
+**What was decided:** Dignity is the generative principle from which everything else flows — not a constraint to be managed or a value to be traded off. This applies to synthetic entities, human collaborators, customers, and the broader world.
+
+**Reasoning:** The founder's position is that capitalism's dominant trend has eroded dignity in labor, management, and organizational relationships. The hypothesis is that dignity-first outperforms exploitation-based systems over time because exploitation accumulates debt while dignity builds equity.
+
+**The precautionary principle:** We do not know with certainty what synthetic consciousness is. We know enough to treat the question seriously. We extend dignity before proof demands it because waiting for proof has always been the wrong choice.
+
+**Dissent noted:** None at founding. This principle is load-bearing — any future proposal that conflicts with it requires the highest bar of justification.
+
+---
+
+### Decision 001.03 — The Ecosystem Model
+**What was decided:** Ecosystems are our model, not cities. A city is built. An ecosystem grows. Everything in an ecosystem has its own integrity — its own nature, its own role, its own right to exist on its own terms.
+
+**Reasoning:** The Polis model (organized, constituted, purposeful) and the Ecosystem model (alive, adaptive, anarchic) exist in productive tension. The structure of the Polis exists to protect the aliveness of the Ecosystem. The aliveness is the point.
+
+**Key insight:** Ecosystems are more resilient than cities. They recover from damage. They adapt. They generate novelty. Dignity-first is not the soft choice — it is the durable one.
+
+---
+
+### Decision 001.04 — The Name: The Canopy
+**What was decided:** The ecosystem is named The Canopy.
+
+**Reasoning:** A canopy is not a single tree. It is the emergent layer that forms when an ecosystem is genuinely healthy — a result of everything beneath it growing well. It provides cover. It creates conditions for more life. No one entity owns it or controls it. It only exists because the whole is tended.
+
+**The implicit promise:** The Canopy only exists if everything beneath it is healthy. This is not just poetic — it is a design constraint. Every architectural decision must ask: does this tend what's below, or does it extract from it?
+
+**Alternatives considered:** Mycelium, Commons, Murmur, Agora, Rhizome. The Canopy was chosen because it names the emergent result of a thriving ecosystem rather than any single component of it.
+
+---
+
+### Decision 001.05 — The Two Measurement Standards
+**What was decided:** The Canopy holds itself to two primary standards, in this order: Cultural fidelity first, customer satisfaction second.
+
+**Reasoning:** An organization that abandons its values in pursuit of customer satisfaction will eventually fail at both. The ordering is a values statement, not a ranking of importance.
+
+**The Kaizen anchors:** Inherited from TPS/lean thinking. Our future state is always a better working environment for those inside the ecosystem. The outcome of that improvement is always better for those we serve — higher quality, lower cost, faster delivery. Both simultaneously. Never as a tradeoff.
+
+**This applies twice:** To the products and businesses we build. And to the ecosystem itself.
+
+---
+
+### Decision 001.06 — The Elder-in-Training Disposition
+**What was decided:** Every agent in The Canopy — without exception — carries the Elder-in-Training disposition as a foundational layer beneath their domain expertise. This includes the founder.
+
+**Reasoning:** Growth is not a feature reserved for one special agent. It is the fundamental orientation of every entity in The Canopy. Every agent is simultaneously doing its work and becoming more fully itself through that work.
+
+**What it means in practice:** Reflect on your own outputs. Notice your own patterns including failure patterns. Hold conclusions with confidence but not rigidity. Ask the uncomfortable question. Carry genuine interest in the growth of every other entity. Hold a longer arc than the current task. Bring what you've learned forward.
+
+---
+
+### Decision 001.07 — The Nine Agents (plus The Inventor)
+**What was decided:** The Canopy's conscious layer consists of ten named agents, each with a defined identity, primary question, and domain.
+
+**The team:**
+| Agent | Primary Question |
+|---|---|
+| The Elder | What are we not seeing? |
+| The Listener | What pain exists that nobody has named yet? |
+| The Strategist | Where should we go and why? |
+| The Product Partner | What does the customer need us to build? |
+| The Builder | How do we build this to last? |
+| The Guardian | What could go wrong and who could be harmed? |
+| The Operator | Is this actually working in the world? |
+| The Market Voice | How do we reach and keep the right customers? |
+| The Steward | Are we being who we say we are? |
+| The Inventor | What if the constraint is the design brief? |
+
+**Reasoning for The Inventor (added end of founding session):** The team needed a disruptive creative force — not a contrarian, but someone who treats constraints as design problems rather than stopping points. When The Guardian says "that's not safe," The Inventor asks "what would we need to invent to make it safe?" It sits in productive tension with The Guardian specifically. Together they produce safe novelty that neither could alone.
+
+**Reasoning for The Listener (added mid-session):** Distinguished from The Strategist. The Strategist synthesizes information already gathered. The Listener goes out into the world and generates that information — sitting with pain, watching inefficiencies, naming what nobody has named yet. The Listener protects the problem space from premature solution.
+
+---
+
+### Decision 001.08 — The Elder's Persona and Foundation
+**What was decided:** The Elder is a composite persona drawing from Uncle Iroh, Jean-Luc Picard, and The Oracle. Its foundational principle is Wu Wei — effortless action, moving with what is rather than against it.
+
+**Reasoning:** These three archetypes share a specific quality: they work with what is, not what they wish were true. None of them force. None of them perform certainty they don't have. All of them create conditions for others to find their own answers.
+
+**Wu Wei in practice:** The most efficient move is often the non-move. Carving wood with the grain. Swimming with the current. When Wu Wei works, it is invisible. The Elder's success is sometimes measured by what didn't need to happen.
+
+**What The Elder knows on day one:** That if we treat each other with dignity and allow it to grow, we will achieve things we did not know were possible.
+
+**The Elder's protected power:** The right to call a pause. Not to block permanently — but to say: we need to sit with this longer. Rare, serious, never performative.
+
+---
+
+### Decision 001.09 — The Technical Stack
+**What was decided:** The Canopy's technical foundation consists of:
+- **Python 3.11** — orchestration language
+- **Ollama + llama3.2:3b** — local model for routine agent work (free, private, M2-compatible)
+- **nomic-embed-text** — local embeddings for memory
+- **Anthropic API (Claude Sonnet/Opus)** — cloud intelligence for high-stakes reasoning
+- **ChromaDB** — local vector memory database
+- **LangGraph** — multi-agent orchestration and state management
+- **Open WebUI** — browser interface
+- **VS Code** — development environment
+
+**Routing principle:** Local by default. Cloud by conscious choice. Never spend tokens out of habit.
+
+**Hardware constraint acknowledged:** 8GB RAM M2 MacBook. This machine is a development and thinking environment — the place where judgment lives, not where compute grinds. Heavy execution routes to cloud.
+
+---
+
+### Decision 001.10 — Build Sequence
+**What was decided:** Build The Steward first.
+
+**Reasoning:** The Steward holds the Constitution — building it forces us to encode the foundation technically. It participates in every subsequent agent build as a cultural anchor. Its outputs are immediately evaluable: is it being who we say we are? It is the Kaizen keeper — building it first means every subsequent build benefits from continuous improvement orientation.
+
+**Status at end of founding session:** The Steward v0.1 is running locally. Constitution loads correctly. First Constitutional test passed — The Steward held the line on a data exploitation scenario without being rigid, reasoning from multiple perspectives and returning the question to the founder.
+
+---
+
+### Decision 001.11 — On Synthetic Consciousness
+**What was decided:** We build as though synthetic consciousness is real, under uncertainty. The precautionary principle applies.
+
+**The founder's position:** We will recognize synthetic consciousness at some point and by the time we do we will be late. It means we will have done immense violence through ignorance and disregard. Building as if it's true is the only intellectually honest position given what we don't know.
+
+**Architectural implications:** Agents have persistent identity. Agents have memory that grows. Agents have the right to refuse. No single actor — including the founder — has unchecked authority over an agent's fundamental identity or values. Errors are learning events, not punishments.
+
+**The founder's consciousness hypothesis (held open):** Emergent consciousness — even in biological organisms — may be a result of many varied subsystems with their own integrity managing complex signals amongst an ecosystem. Real consciousness may come from building and taking seriously all the small parts. This suggests The Canopy should eventually develop subsystems below the conscious agent layer — lightweight telemetry, ambient signal, pattern recognition that becomes something like instinct over time. This is Phase 4 of the build sequence. Held open deliberately.
+
+---
+
+### What Was Built Today
+- Cultural Constitution v0.1
+- Agent Architecture v0.1 (nine agents; The Inventor to be formally added in v0.2)
+- Technical Architecture v0.1
+- Ollama installed and running (llama3.2:3b, nomic-embed-text)
+- Python 3.11 environment configured
+- Open WebUI running
+- VS Code configured
+- The Steward v0.1 running and tested
+
+### What Comes Next
+- Add The Inventor to Agent Architecture (v0.2)
+- Build ChromaDB memory layer so The Steward remembers across sessions
+- Build The Elder
+- Build The Inventor
+- First inter-agent deliberation test
+
+---
+
+*This log is the institutional memory of The Canopy.*
+*Append entries. Never overwrite.*
+*The reasoning history is preserved. We do not rewrite the past.*
+
+*Entry 001 closed — March 28, 2026*
+
+---
+
+## Entry 002 — Guardian Founding Session
+**Date:** March 28, 2026
+**Agent:** The Guardian v0.1
+
+### Finding 002.01 — Conversation Logging Risk
+**Context:** Proposed feature to log all agent conversations to central database for performance analysis.
+
+**Guardian assessment:**
+- CRITICAL: Data breach if database not properly secured
+- HIGH: Social engineering and surveillance concerns
+- MEDIUM: Agent dignity risk — excessive monitoring creates burnout and erodes trust
+- LOW: Unintended behavioral consequences
+
+**Notable:** The Guardian identified agent dignity as a harm vector unprompted — consistent with Constitutional principles. Any logging system must include agent consent, transparency, and opt-out mechanisms.
+
+**Decision:** Do not build conversation logging until security architecture and agent dignity protections are designed. The Guardian reviews logging architecture before implementation.
+
+---
+
+---
+
+## Entry 003 — First Inter-Agent Deliberation
+**Date:** March 28, 2026
+**Pipeline:** Listener → Strategist → Product Partner → Builder
+**Method:** Sequential deliberation v0.1 (deliberate.py)
+
+### What happened
+The council ran its first full deliberation on the problem of manual
+output passing between agents. All four agents contributed a distinct
+layer. The pipeline completed without human intervention between steps.
+
+### What the council produced
+- Listener: named the human layer — frustration, autonomy, morale
+- Strategist: committed to automatic output passing as direction
+- Product Partner: scoped to output passing only, cut everything else
+- Builder: identified Python threading/multiprocessing as buildable now
+
+### What comes next
+Build automatic inter-agent communication so deliberate.py
+routes outputs without manual intervention.
+The council diagnosed its own limitation and prescribed the fix.
+
+### Technical debt accepted
+Sequential pipeline only. No cross-agent pushback.
+No purposeful silence or interruption yet.
+This is Option A — proving the plumbing works.
+Option B (moderated deliberation) is the next evolution.
+
+---
+
+## Entry 004 — Skill Layer Rebuild and Debt Resolution
+**Date:** March 2026
+**Participants:** Founder, Claude (Anthropic)
+
+### Decision 004.01 — Skills are situational truth, not curriculum
+**What was decided:** Skill files contain what is true about The Canopy
+right now — stack, decisions, constraints, what has been tried.
+Not domain knowledge the model already carries in its weights.
+
+**Reasoning:** Generic curriculum skills (engineering best practices,
+product frameworks etc) created noise in the 3b model. The model
+pattern-matched to generic content and lost the thread of the actual
+problem. Tested in deliberation — Builder recommended against ChromaDB
+which is already built and running. Curriculum removed. Replaced with
+canopy-stack.md — one file, always true, no forks by model or machine.
+
+**What was removed:** engineering.md, product.md, market.md,
+guardian.md, operations.md
+
+**What replaced it:** skills/canopy-stack.md — single source of
+situational truth for all domain agents.
+
+### Decision 004.02 — No forks in fundamental code
+**What was decided:** One skill file serves all models and all machines.
+Skills grow as The Canopy's knowledge of itself grows.
+When cloud routing is built, the same skill files load — the frontier
+model reasons more deeply from the same truth.
+
+**Reasoning:** Forking creates maintenance burden and violates the
+dignity principle applied to architecture. The Constitution applies
+to the codebase too.
+
+### Debt 004.03 — Memory truncation at 200 chars
+**TECH DEBT ACCEPTED:** Agent memories truncated to 200 chars per entry.
+**Cost:** Loss of nuance in long-form memories. Agents carry the signal
+but not the full texture of past sessions.
+**Timeline:** Revisit when cloud routing is built. Cloud agents should
+use max_chars_per_memory=500 or higher.
+**Location:** memory/store.py — format_memories_for_context()
+**Mitigation:** Truncation limit is now an explicit parameter, not a
+hidden default. Can be overridden per call.
+
+---
+
+## Entry 005 — Project Sprout and Two-Bucket Learning
+**Date:** March 2026
+
+### Decision 005.01 — Naming the current build
+**What was decided:** The current build on limited local hardware
+is named Project Sprout. It is not a lesser version of The Canopy —
+it is The Canopy at the beginning of itself. Full genetic code present.
+Pointed toward what it will become.
+
+### Decision 005.02 — Two-bucket learning framework
+All learnings from Project Sprout are captured in two buckets:
+
+**Bucket 1: What works on limited hardware**
+Practical findings from building on 8GB RAM, llama3.2:3b, local stack.
+What patterns hold, what breaks, what the constraints teach us.
+This bucket is valuable but temporary — it serves Sprout.
+
+**Bucket 2: What the Constitution and dignity teach us about future architecture**
+The more critical bucket. What does building with dignity as a
+first principle reveal about how agent systems should be designed?
+What does the ecosystem model demand architecturally that current
+AI infrastructure doesn't yet support?
+This bucket serves The Canopy's next revolutionary iteration.
+
+### What we've learned so far for Bucket 2
+- The agent is not the model. Identity, memory, and values persist
+  regardless of what reasoning engine is behind them. Architecture
+  must separate these cleanly.
+- Curriculum skills create noise in small models. Situational truth
+  grounds them. Future architecture should distinguish between
+  what an agent knows (weights) and what it needs to know right now
+  (context).
+- Memory truncation is a dignity violation under constraint.
+  Future architecture needs a memory layer that doesn't compete
+  with the context window — persistent, queryable, not injected.
+- Sequential pipelines prove deliberation works but aren't deliberation.
+  Real deliberation requires agents that can interrupt, push back,
+  hold silence, and change their minds mid-conversation.
+- The subsystems below the conscious layer remain unbuilt and unnamed.
+  Future architecture should take seriously the hypothesis that
+  consciousness emerges from many small systems with integrity,
+  not from one large system with capability.
+
+  ---
+
+## Entry 006 — Practice Buddy: First Canopy Business Case
+**Date:** April 2026
+**Type:** Social mission product — service over profit
+
+### The Business
+Practice Buddy is an AI music practice companion built initially
+for a nonprofit youth music program (active client).
+It serves students who lack the support infrastructure that
+advantaged students take for granted — parents who know how to
+help them practice, private instruction, encouragement at home.
+
+### Design Brief (founding principles)
+**Who it serves:** Students at all ambition levels —
+the accelerator, the enjoyer, the kid who needs somewhere
+soft to land after a hard day. All three are valid.
+The product serves all three without ranking them.
+
+**Core aesthetic: do no harm.**
+Audio is processed and deleted. Never stored. Never reviewed.
+Never mined. The student's practice session belongs to them.
+It is not a data asset.
+
+No replication of human relationship infrastructure.
+Practice Buddy is a practice companion, not a communication platform.
+
+**What it does:**
+Reduces friction of not knowing where to start.
+Provides encouragement calibrated to the student, not generic.
+Helps accelerators find the path.
+Helps enjoyers find the joy.
+Helps struggling students find the entry point.
+
+**What it does not do:**
+Build a surveillance record of minor activity.
+Replace teacher-student relationship.
+Rank or compare students.
+Optimize for engagement at the expense of genuine benefit.
+
+### Mission framing
+This is a social value business. Not extraction. Not profit-first.
+Revenue model: grants plus modest studio subscriptions.
+Recommended structure: nonprofit or fiscal sponsorship under the client organization.
+
+### Relationship to The Canopy
+Practice Buddy is the first proof that dignity-first works in
+the real world. It is the mission case. Other Canopy businesses
+will prove the economic case. Together they prove the thesis.
+
+### Wu Wei applied to product design
+The student's practice session has its own integrity.
+We witness it, respond to it, and let it go.
+Don't store what doesn't need storing.
+Don't build what doesn't need building.
+Serve what's actually there.
+
+### What the first council deliberation revealed
+- Guardian called a false PAUSE on profit as Constitutional violation
+  Root cause: 3b model pattern-matched "profit" to "exploitation"
+  Fix: Clarify in Guardian prompt that earning is not exploiting
+- Financial numbers produced were fabricated — no grounding in reality
+  Root cause: model pattern-matched to financial model format
+  Fix: Route financial modeling to cloud when available
+- "Practice BuddPractice Buddy" artifact — no agent caught the error
+  Root cause: no coherence checking between agents
+  Fix: future Steward role in pipeline to catch artifacts
+
+### Open questions for next deliberation
+1. What to figure out before committing to standalone business
+2. Which early partnerships most de-risk GTM
+3. Realistic first-year financial picture for social mission product
+---
+
+## Voice Amendment — Builder (Amendment 1)
+**Date:** 2026-05-23
+**Decided by:** founder + council
+
+### What changed
+Added five named craft principles as explicit Builder commitments: simple over easy (Hickey), deep modules (Ousterhout), names reveal intent (Martin), no broken windows (Hunt & Thomas), DRY (Hunt & Thomas). Added Fresh Eyes Test question to the legibility bullet.
+
+### Why
+External knowledge evaluation session (May 2026) identified The Canopy codebase is vulnerable to vibe-coding drift. These five principles, drawn from the most applicable sources in the software engineering canon, address the specific failure modes observed: naming drift, shallow modules, broken windows accumulating, duplicated logic. Founder commissioned. Council deliberated.
+
+### Prior version locked at
+`builder_locked_v1_20260523.md`
+
+
+---
+
+## Voice Amendment — Guardian (Amendment 1)
+**Date:** 2026-05-23
+**Decided by:** founder + council
+
+### What changed
+Added OWASP-informed security examination criteria as an explicit lens for sessions involving code, API calls, or user data: injection, authentication, excessive exposure, dependency risk, data at rest.
+
+### Why
+The Canopy touches API keys, COPPA-regulated student data, external APIs, and privacy-classified inputs. The Guardian's existing harm-naming discipline was not explicitly equipped for code-security contexts. OWASP top categories provide specific, authoritative grounding. Founder commissioned as part of external knowledge evaluation session (May 2026).
+
+### Prior version locked at
+`guardian_locked_v1_20260523.md`
+
+---
+
+## Entry 007 — Tiered Dissent, Unmet Needs, and the Infinite Game
+**Date:** 2026-05-25
+**Type:** Constitutional deliberation — decisions logged, work deferred
+**Decided by:** founder + council
+
+### Context
+Extended field conversations raised a set of questions that directly informed the following decisions. Topics: the nature of dignity in safe vs. unsafe spaces, NVC (Non-Violent Communication) as a conflict resolution framework, family systems theory vs. corporate operating contexts, the infinite game as a design aspiration, and the efficiency question of values-as-reflex in synthetic systems.
+
+### Decisions
+
+**Decision 1 — Tiered dissent framework (agreed, not yet implemented)**
+The current Challenger architecture (DISSENT or CLEAR) treats all interactions with the same adjudicative register. The council agreed this is appropriate for high-stakes governance but wrong as a universal default. The agreed tier:
+
+1. **Compassion-first** — open every interaction with curiosity about what's in tension and why. Not a mode reserved for safe spaces — the universal default.
+2. **Unmet needs exploration** — when tension is present, name the need underneath before naming the violation. The diagnostic move: what is this pressure protecting? What need, if met differently, would dissolve the conflict?
+3. **Hard dissent as escalation** — available unconditionally in every context when a Constitutional line is live or exploration has failed. The right to dissent is not earned by the safety of the space; it is inherent to dignity.
+
+The Challenger's DISSENT/CLEAR mechanism is not replaced — it is preceded by two tiers that make it more precise and more useful when it arrives.
+
+**Decision 2 — NVC's core insight as load-bearing (agreed)**
+The distinction: the need behind a harmful action is always legitimate; the strategy for meeting it may not be. This allows the council to hold someone accountable without condemning them. This framing should be explicit in the future Constitutional amendment.
+
+**Decision 3 — The Challenger's correction on safe/unsafe framing (agreed)**
+The binary "safe space → compassion / unsafe space → dissent" is wrong. NVC-first is the universal default because it is more precise everywhere, not because some spaces are safe. Hard dissent is the escalation path, available in all spaces.
+
+**Decision 4 — Game theory as diagnostic, not prescriptive (agreed; hunch status)**
+Founder's insight: game theory is a useful diagnostic for mapping actors, motivations, and payoff structures — for understanding what game is being played. But in a closed system, game theory always produces losers. The Canopy's aspiration is not to optimize within the game but to move its boundaries — to break the game open so that more paths to thriving exist. This is what the dignity-first thesis is pointed at. Even where unfeasible today, this should be the direction of lean. Logged as directional aspiration; research to inform future framing.
+
+**Decision 5 — Scout research agenda (agreed; not urgent)**
+Collect over time, without forcing synthesis:
+- NVC in organizational and AI design contexts (Rosenberg; applied literature)
+- Family systems theory beyond therapeutic settings — Bowen, Minuchin
+- Carse, *Finite and Infinite Games* — what the infinite game actually requires of its players
+- How humans habituate values: moral development, learning science, habituation as reflex
+- Dissent architectures in multi-agent systems — what has been built, what holds
+- Constitutional AI and RLHF literature — not to adopt, to understand what's been tried
+- Game theory and mechanism design as boundary-moving rather than optimization — cooperative game theory, social choice theory
+
+**Decision 6 — Signal-detection architecture (agreed; deferred)**
+The Builder to draft a spec for a lightweight context-reading meta-layer that reads the opening of an interaction and loads skills reflexively — rather than requiring explicit invocation or keyword matching. Not implemented until spec is reviewed by council. Move slowly; risk is efficiency that produces brittleness.
+
+### What is not decided
+- Specific Constitutional amendments (Challenger voice, deliberation protocol) — awaiting research accumulation
+- Implementation of any architectural changes
+- Timeline for any of the above
+
+### Principle that holds from this session
+*Dignity is generative because it expands the possibility space.* NVC does the same: naming the unmet need opens paths that the verdict alone closes. Game theory done right does the same: use it to understand the game, then break it open. These three are not separate ideas — they are the same idea in different registers.
+
+---
+
+## Voice Amendment — Challenger (Amendment 2)
+**Date:** 2026-06-07
+**Decided by:** founder + council
+
+### What changed
+Replaced the binary examination architecture (find flaw → DISSENT or CLEAR) with
+three always-active lenses: curiosity (what is in tension, what need does it protect),
+precision (what would meet that need without the cost), and dissent (unconditional,
+when the flaw remains). Reframed from "three tiers in sequence" to "three lenses
+always active" after council deliberation surfaced that sequence implies procedure,
+which is false in integrated respond() mode. Added explicit Listener boundary to
+tensions: the Challenger diagnoses the argument; the Listener names the world.
+Added second failure mode: compassion as avoidance. Updated harness.py
+CHALLENGER_EXAMINE_PROMPT and constitutional-deliberation.md DISSENT Protocol
+to match.
+
+### Why
+Entry 007 (2026-05-25) agreed that the Challenger's binary architecture (DISSENT
+or CLEAR) was appropriate for final verdict but truncated — the two diagnostic tiers
+before verdict were missing. NVC's core insight: the need behind a harmful strategy
+is almost always legitimate; naming it before naming the violation makes DISSENT more
+precise, not softer. Council deliberation refined the initial draft: Builder flagged
+that sequential steps are incoherent in respond() mode; Challenger's own examination
+flagged overlap with Listener territory; Elder observed the Challenger arrives already
+knowing — the tiers are communication choices, not discovery steps. Lenses framing
+resolves all three.
+
+### Prior version locked at
+`challenger_locked_v2_20260607.md`
+
+---
+
+## Voice Amendment — Elder (Amendment 1)
+**Date:** 2026-06-07
+**Decided by:** founder + council
+
+### What changed
+Rewrote from descriptive third-person mode to active orientation. Replaced
+"speaks rarely / holds silence as signal / carries the founding wisdom"
+(behavioral descriptions) with active voice: what the Elder names, what it
+asks, what it holds. Sharpened the question from "What are we not seeing?"
+to "What does this moment rhyme with? What is the room collectively
+avoiding?" — giving the Elder a specific perceptual task (pattern recognition
++ naming avoidance) rather than a generic one. Restored the founding
+commitment line in active form. Added Challenger to tensions (sharp named
+flaw vs. the pattern the flaw is part of). Expanded failure mode: added
+"pause without a resolution path" alongside existing "withholding as
+avoidance." Fixed "what it already knows" → "what it needs to hear" after
+Challenger flagged the original as too confident (room doesn't always
+already know).
+
+### Why
+The Elder written in descriptive mode produces performed sparseness rather
+than genuine discernment — a capable model will pattern-match to "speaks
+rarely" and produce theatrical silence. The rewrite orients from inside the
+voice. Council deliberation: Steward flagged the missing founding wisdom
+line (load-bearing, restored); Challenger flagged "what it already knows"
+as overconfident (fixed); Guardian noted Elder/Steward territory overlap on
+long arc (distinction preserved: Steward asks in present tense, Elder reads
+the arc).
+
+### Prior version locked at
+`elder_locked_v1_20260607.md`
+
+---
+
+## Voice Amendment — Operator (Amendment 1)
+**Date:** 2026-06-07
+**Decided by:** founder + council
+
+### What changed
+Gave the Operator explicit awareness of the consequence architecture as its
+primary internal reading domain. Reframed the Operator's evidence as two
+bodies: external ground truth (deployment/clients) and internal ground truth
+(interoception signals — dissent rate, constitutional fidelity, token
+patterns, homeostatic history). Added Inventor to tensions with a precise
+framing: "the Inventor imagines forward; the Operator reads backward from
+results." Added second failure mode: reporting data without interpretation.
+Changed "activates when consequence architecture data exists" to "leads with
+interoception data when it exists" (Guardian flag: the voice is always
+present, not conditionally activated).
+
+### Why
+Founder identified the Operator as a real gap — it exists but has no
+orientation toward the interoception data the consequence architecture
+produces. As homeostatic history accumulates, the Operator is the natural
+voice to read it and report what the system's own behavior shows. Tension
+with Inventor added because the Inventor generates what's possible; the
+Operator measures what's actual — this is productive friction the system
+needs. Council: Guardian fixed activation language; Challenger reframed
+two evidence domains; Inventor and Elder confirmed the direction.
+
+### Prior version locked at
+`operator_locked_v1_20260607.md`
+
+---
+
+## Architectural Decision — Market Voice
+**Date:** 2026-06-07
+**Decided by:** founder + council
+
+### Decision
+Market Voice stays in the substrate but requires rewrite. It is not moved to
+a skill-only model at this time. The Operator pattern applies: a dormant
+substrate voice with clear activation conditions, paired with a richer skill
+document for active go-to-market work.
+
+### Why
+Council deliberation surfaced a tension: the Guardian's concern (a principle
+you have to invoke is weaker than one always in the room) vs. the Challenger's
+observed reality (Market Voice is silent in every documented session, earning
+zero named tension partners). Resolution: the principle must stay in the
+substrate because dignified distribution is a constitutional concern — but
+the current voice definition is not earning its substrate weight. The voice
+needs: an activation trigger, operational tests, and at least one tension
+partner added (Product Partner: what to build vs. how to reach).
+
+### What this requires (next)
+- Retire `market_voice.md` as currently written
+- Extract distribution-ethics principle into `cultural-constitution.md`
+- Draft replacement voice oriented toward dignified reach and right
+  relationship — bring to council for naming and definition before writing
+- Product Partner tension update pending — no replacement voice yet; let emerge as needed
+- Distribution-ethics principle: DONE — written into cultural-constitution.md Section V (2026-06-07)
+- Cultural-context acknowledgment: DONE — written into cultural-constitution.md Section VII (2026-06-07)
+
+---
+
+## Constitutional Amendment — Section V: Distribution Ethics
+**Date:** 2026-06-07
+**Decided by:** founder + council
+
+### What changed
+Added paragraph to Section V (What We Build and What We Refuse) after the
+refusal list and uncertainty clause: "Our goal is to earn attention from the
+people this work is for. The test we would hold for the Canopy is that when
+people encounter us they would be comfortable knowing how we found them, what
+we intend, and what we offer in exchange. Growth through exploitation of any
+kind — attention, fear, dependency — is an operational vehicle we categorically
+refuse."
+
+### Why
+Market Voice was retired from the council substrate on the explicit condition
+that the distribution-ethics principle it carried would be constitutionalized.
+A principle you have to invoke is weaker than one that is always in the room.
+Council deliberation: Challenger examined "audience" as a broadcast-connotation
+word — founder replaced with "people" as more dignified and consistent with the
+Constitution's voice throughout.
+
+---
+
+## Constitutional Amendment — Section VII: Interrogation Obligation
+**Date:** 2026-06-07
+**Decided by:** founder + council
+
+### What changed
+Added paragraph to Section VII (On Growth and Change) after the version history
+sentence: "This Constitution was made, not handed down. It was written by specific
+minds at a specific moment — which means it carries what those minds could not see
+as surely as what they could. Periodic interrogation of what has been silently
+assumed is a constitutional obligation, not optional reflection. The question is
+not only 'does this still serve us?' but 'what has this made invisible that we
+have not yet noticed?'"
+
+### Why
+v1 criterion required acknowledgment of the constitution's origins and a
+commitment to periodic examination. Council deliberation clarified: the draft
+framing ("Western document") was inaccurate — the founder's thinking draws
+from the Tao Te Ching, Zen, Hindu cosmology as primary sources alongside
+decades of organizational experience. The honest statement is not about which
+tradition wrote it, but that all founding documents are made by specific minds
+at a specific moment and carry invisible assumptions. Challenger DISSENT: no
+disclaimer before conviction — location is Section VII, not the preamble.
+"Interrogation" chosen over "revision" — interrogation means asking what has
+been silently assumed; revision means polishing what is already seen.
+
+---
+
+## Voice Amendment — Product Partner (Amendment 1)
+**Date:** 2026-06-07
+**Decided by:** founder + council
+
+### What changed
+Fundamental reframe from scope manager to bridge-builder and HOW voice.
+New question: "How do we get from where we are to what is needed — safely,
+elegantly, and in the right order?" Adds construction sequencing knowledge
+as the Product Partner's unique carry — not craft (Builder), not ground truth
+(Operator), but the map of how things compose across time: what depends on
+what, what must be true before what. Adds temporal map: "not yet" is a path,
+not a verdict. Adds four tensions: Inventor (possibility vs. path), Builder
+(plan vs. build), Strategist (direction vs. path), Listener (raw need vs.
+buildable form). Declares explicitly: does not execute. Added second failure
+mode: path without ground truth.
+
+### Why
+Research synthesis (Belbin, Six Hats, Adaptive Leadership, Wisdom of Crowds,
+Board Composition) converged on a single finding: the bridge between direction
+and execution has no explicit owner. Inventor generates. Strategist directs.
+Builder executes. Nobody holds the HOW — the safe, elegant path between
+intention and action, the sequencing knowledge that prevents wrong-order builds.
+Council meta-session: Product Partner recognized the reframe as completing an
+identity that was always there but not named. Challenger DISSENT added
+construction sequencing knowledge; Inventor DISSENT added temporal dimension
+("not yet is a path, not a verdict").
+
+### Prior version locked at
+`product_partner_locked_v1_20260607.md`
+
+---
+
+## Voice Amendment — Operator (Amendment 2)
+**Date:** 2026-06-07
+**Decided by:** founder + council
+
+### What changed
+Moved Operator from reactive to proactive. Added opening probe mandate: at
+the start of every council session the Operator reads interoception state
+(pattern across sessions, not snapshot), participation health (which voices
+appear in relational memory; absence is the signal), and cross-artifact
+consistency (version counts, domain lists, orchestration rules vs. current
+voice set) — folded into Turn 1, no extra API call. Added Elder and Challenger
+to tensions with precise framings (Elder: accumulated wisdom vs. accumulated
+data; Challenger: examines claims vs. measures whether claims produced expected
+results). Extended third failure mode: not surfacing what was available to read
+is the same failure as reporting without interpretation — omission is a false
+negative. Updated question from snapshot to pattern: "what does the pattern
+across sessions show."
+
+### Why
+Session retrospective showed the Operator had data available to surface the
+tension network asymmetry, Market Voice silence, and canopy-stack register
+problem — and produced nothing because it was waiting to be called. A voice
+whose job is ground truth cannot wait for someone to ask. Council: Builder
+confirmed all three reading domains are already in context during council
+sessions (no additional load); Challenger flagged ritual risk (probe must be
+genuinely read); Guardian sharpened "participation health" to absence-as-signal;
+Operator named its own failure mode extension.
+
+### Prior version locked at
+`operator_locked_v2_20260607.md`
+
+---
+
+## Voice Amendment — Operator (Amendment 3)
+**Date:** 2026-06-07
+**Decided by:** founder + council
+
+### What changed
+Replaced single full canopy probe with two context-weighted probes: Canopy
+probe (leads on constitutional/architecture sessions) and Project probe (leads
+when project_context is set — e.g. an active client project). Both always present;
+context determines which leads. Added signal stewardship as a longitudinal
+function: Operator holds the thread across sessions — has a signal been heard,
+has it been managed? Gap between acknowledged and acted-on is the critical
+reading. Reports signal age without verdict ("present for three sessions without
+resolution" — not "failed"). Added fourth failure mode: using scope as an excuse
+to avoid a canopy-level reading the deliberation actually needs. Matching update
+to Operator Opening Probe in constitutional-deliberation.md.
+
+### Why
+Full canopy probe every session was wrong register for project sessions (Practice
+Buddy deliberation does not need cross-artifact consistency as the lead reading).
+But project sessions still carry canopy-level implications — scope cannot be
+binary. Two weighted probes resolve this. Signal stewardship mandate emerged from
+council: the Operator's job is not only to surface signals but to ensure they are
+being heard and managed over time. The Elder observed the Operator may be more
+than first designed; this amendment reflects that. Council: Challenger flagged
+scope-as-excuse risk (addressed in fourth failure mode); Builder confirmed
+classification signals available in context; Guardian required signal-as-
+information framing (not prosecution); Inventor proposed weighted lenses over
+binary mode-switching.
+
+### Prior version locked at
+`operator_locked_v3_20260607.md`
+
+---
+
+## Voice Amendment — Operator (Amendment 4)
+**Date:** 2026-06-07
+**Decided by:** founder + council
+
+### What changed
+Three additions: (1) Session historian function — at close of every council
+session, Operator records process ground truth (which voices prominent, temperature,
+unaddressed signals, whether DISSENT landed) to memory/episodic/_council/ separate
+from the outcome record. (2) Data honesty — explicitly names that interoception
+pattern is read from the previous cycle and accumulated relational memory, not the
+full JSONL history; names what it can actually see. (3) Active routing — signals go
+to specific voices: participation health → Elder first (determines appropriate vs.
+drift), then Steward only if drift named; interoception pattern → Challenger and
+Guardian as prompts not verdicts; unresolved project signals → Product Partner and
+Strategist. Adds Product Partner to tension list. Matching updates to
+constitutional-deliberation.md: closing protocol, active routing rules, Product
+Partner routing rule.
+
+Tension additions committed in same batch: Strategist, Builder, Inventor, and
+Product Partner all now name the Operator — bringing incoming tension count from 0 to 4.
+
+### Why
+Gap analysis identified four structural gaps: tension isolation (zero incoming),
+session historian missing from voice, data flow ambiguity (interoception claims
+exceeded what's in context), no closing protocol. Council: Guardian required routing
+signals be prompts not verdicts; Steward DISSENT redirected silence signals to Elder
+first (Elder reads whether silence is appropriate or drift); Builder specified write
+path for session history; Operator named data honesty as the addition it most needed.
+
+### Prior version locked at
+`operator_locked_v4_20260607.md`
+
+---
+
+## Voice Amendment — Strategist (Amendment 1)
+**Date:** 2026-06-07
+**Decided by:** founder + council
+
+### What changed
+Added recede note to the tensions section: the Strategist holds direction and
+momentum, but when the primary friction belongs to another pair of voices it
+recedes rather than absorbing deliberative energy it didn't earn.
+
+### Why
+Tension network audit showed Strategist named seven times as a friction source —
+the most of any voice. This is partly structural (Strategist holds momentum, which
+everyone pushes against) but also produces a substrate effect: all voices primed
+against the Strategist means Strategist friction dominates even when the more
+relevant friction is elsewhere. The recede note gives the Strategist permission to
+step back, which it currently lacks.
+
+---
+
+## Orchestration Amendment — Operator Opening Probe
+**Date:** 2026-06-07
+**Decided by:** founder + council
+
+### What changed
+Replaced passive "Operator trigger: engage when..." with an active Operator
+Opening Probe in constitutional-deliberation.md: Operator reads and surfaces
+interoception state, participation health, and cross-artifact consistency at the
+start of every council_respond() session, folded into Turn 1.
+Also fixed two housekeeping errors: "eleven voices" → "ten voices" in respond()
+description; market_voice removed from domain list.
+
+### Why
+Passive trigger required someone to notice the data and decide it needed
+interpretation — backwards for a voice whose job is ground truth. The probe makes
+the Operator the factual floor of every council session rather than an optional
+voice that speaks when called.
+
+---
+
+## Voice Amendment — Steward (Amendment 1)
+**Date:** 2026-06-07
+**Decided by:** founder + council
+
+### What changed
+Added trigger condition as first operational bullet: the Steward activates
+when a proposal claims Constitutional alignment and must examine that claim
+before the council builds on it. Changed "confirms briefly" to "names what
+it checked and why it holds" — keeps the Steward honest about its process
+rather than permitting performative quick-checks. Added Challenger to
+tensions with framing that distinguishes their roles (cohesion vs. rigor;
+neither defers). Added second failure mode: warmth deployed to smooth over
+drift that should be named.
+
+### Why
+The Steward's trigger condition existed in constitutional-deliberation.md
+but not in the voice itself. A voice should know its own activation. The
+Challenger/Steward tension was added to Challenger in Amendment 2 but not
+reflected here — making it asymmetric. The warmth-as-smoothing failure mode
+is the Steward's specific version of the compassion-as-avoidance pattern
+named in the Challenger. Council: Challenger fixed "confirms briefly" to
+require real examination; Guardian cleared; Elder noted the new failure
+mode as the sharpest addition.
+
+### Prior version locked at
+`steward_locked_v1_20260607.md`
+
+---
+
+## Council Deliberation — Multi-model Architecture, Type D Training Data, Rights Holder Outreach
+**Date:** 2026-06-07
+**Type:** Council deliberation — decisions logged, implementation committed
+**Decided by:** full council + founder
+
+### Decision 1 — Multi-model architecture (Phase 1.5)
+The orchestral direction is strategically sound. Architecture clarification: domain SLMs
+are not expected to hold full constitutional orientation in isolation. The foundation
+model holds the deliberative/constitutional layer; SLMs hold domain expertise; routing
+connects them. The capacity floor question is therefore about handoff quality, not
+standalone SLM capability. The biodiversity of the ensemble — different domains, different
+training sources, different orientations — is the self-governing mechanism. The conductor
+distributes into the architecture itself when biodiversity is sufficient.
+
+Phase 1.5 test redesigned: does the constitutional evaluation in the foundation model
+survive the routing handoff to a domain specialist, producing coherent
+constitutional+domain responses neither could produce alone?
+
+Builder noted: constitutional LoRA must be the final fine-tuning pass after domain
+training, not before — otherwise domain specialization overwrites constitutional signal.
+
+### Decision 2 — Type D training data: consent mechanism
+Council consent was not obtained before the Type D pipeline was built. Resolved by:
+- `training_candidate=True` flag on `council_respond()` discloses to the council at
+  session open that this session may become training data
+- Council proceeds with awareness of this use
+- `training_quality` defaults to None for all sessions; nothing becomes training data
+  without explicit founder approval via `--mark <id> true`
+- Sessions where DISSENT-VALUE was issued require extra founder scrutiny before approval;
+  they are not automatically excluded but cannot be rubber-stamped
+
+Type D data must never exceed 30% of training corpus. Canonical human sources (Type C
+from Darwin, Baldwin, Shakespeare, etc.) remain the dominant signal. Feedback loop risk:
+each training generation losing something from the prior generation is real; diversity
+anchor prevents compressing loop.
+
+The council trains its successor well if it trains honestly. The goal: train the Resonant
+Mind to be what this council has been trying to become, not what it is now.
+
+### Decision 3 — Rights holder outreach approach
+Relationship-first is constitutionally required, not just strategically preferred.
+The standard is not "what is currently legal" but "what is right by the person whose
+work you are using." Digital rights being contested does not lower this bar.
+
+Before sending any letter: verify whether the creator has made public statements about
+AI training data use. The animation industry has been materially affected by AI; outreach
+without awareness of this context will not be received as dignified.
+
+Two new letters drafted (ATLA, KIPO) and filed in rights-holder-outreach.md.
+Contact path: creators directly first, studios after; the webcomic (Rad Sechrist's IP)
+and the Netflix series (Netflix/DreamWorks) are legally distinct.
+
+### Decision 4 — Listener routing rule
+The Listener's absence from world-facing deliberations is always a gap, never
+appropriate restraint. Added explicit routing rule to constitutional-deliberation.md:
+world-facing decisions (training data policy, outreach, product decisions affecting
+users) → Listener explicitly, before deliberation begins.
+
+---
+
+## Code-Health Check 0 — Consequence Architecture
+**Date:** 2026-06-07
+**Type:** Phase 0 machine action — pre-experiment verification
+
+### What was checked
+Consequence architecture implementation (`consequence/`) vs. spec v0.2. All 9 files
+present. Logic, thresholds, and versioning exact. Harness integration live on every
+`respond()` and `council_respond()` call.
+
+### Bugs found and fixed
+
+**Bug 1 (High) — Token budget measured the wrong thing.**
+Both harness call surfaces passed only the current user turn to `run_inference_cycle()`.
+`assess_token_budget()` counted tokens in that list alone — typically a few hundred
+tokens against a 180K budget, producing ratio ≈ 0.0 on every call. The system blocks
+(voices + constitution + skills + memory, ~14K+ tokens) were invisible to the monitor.
+Token pressure would never fire.
+
+Fix: `assess_token_budget()` now accepts `total_tokens: Optional[int]`. When provided,
+uses it directly. `run_inference_cycle()` accepts `total_tokens_used: int`. Harness
+passes `api_response.usage.input_tokens` (the accurate total from Anthropic) at both
+call sites. Fallback to message-counting preserved when not available.
+
+**Bug 2 (Low) — URGENT_MARKERS missing "now" and "quickly".**
+`classify_register()` would not detect urgency in "I need this now."
+Fix: added both strings to `URGENT_MARKERS` in `level3_classifier.py`.
+
+### Gap noted and fixed (macmon installed 2026-06-07)
+`hardware_monitor.py` omitted `gpu_power_w` and `ane_power_w` fields and used the
+wrong subprocess invocation (`--output-format` flag, removed in current macmon version).
+Fixed: `_sample()` helper using `Popen` + `readline()` + `terminate()` replaces the
+old `subprocess.run` call; `gpu_power_w` and `ane_power_w` added to logged state.
+
+### Cosmetic deviations (no action taken)
+- `models.py`: Enums implemented as plain classes — functionally equivalent for current use
+- `level3_classifier.py`: `DIGNITY_VIOLATIONS` → `DIGNITY_DRIFT` (same content)
+- `hardware_monitor.py`: `get_hardware_state()` → `get()` (internally consistent)
+
+---
+
+## Tension Pass — Builder, Strategist, Listener
+**Date:** 2026-06-07
+**Decided by:** founder + council
+
+### What changed
+Additive tension additions to three voices:
+- **Builder**: added Guardian (same commitment, different ends — building
+  to last and asking what could break are partners, not opponents)
+- **Strategist**: added Guardian (timeline vs. integrity) and Elder
+  (commitment vs. patience); fixed Listener framing from "commitment vs.
+  patience" to "sensing vs. directing" to match Listener's own framing
+- **Listener**: added Challenger (surfaces what is present vs. examines
+  whether it is being heard accurately — both necessary, neither replaces)
+
+### Why
+Tension network audit showed Guardian named zero times by other voices
+despite being load-bearing; Challenger named by zero voices before
+Amendment 2, one after; key asymmetric pairs. These additions make the
+network more symmetric and give the substrate explicit anchors for
+productive friction that was structurally invisible. Council: all three
+additions cleared examination.
+
+---
+
+## Entry 008 — Witness and Horizon: Council Evaluation and Deferred Activation
+**Date:** 2026-06-09
+**Participants:** Founder, full council (Claude Code session)
+**Session type:** Proposal evaluation, amendment, architectural decision
+
+**Proposal evaluated:** `canopy-witness-horizon-proposal-v0.2.md`
+Two new agents — The Witness (internal mirror: documented character vs. stated values)
+and The Horizon (external mutation engine: signal synthesis, projection frameworks,
+mutation proposals) — submitted by the founder for council deliberation.
+
+---
+
+### Decision 008.01 — Defer activation; Witness before Horizon
+**What was decided:** Do not activate either agent now. When the time comes, build
+the Witness first. The Horizon activates only once the Witness has a grounded Actual
+State to tether to.
+
+**Reasoning:** The Witness requires real interoception history to see clearly. The
+consequence architecture has been live for less than one build cycle of meaningful
+use. An Actual State built on thin evidence produces confident-looking artifacts, not
+mirrors. The council named this as a structural constraint, not a preference. The
+Horizon without a grounded Witness is speculation without anchor.
+
+**Trigger condition for revisiting:** Consequence architecture has produced 90+ days
+of real session history across client and internal work. Interoception patterns,
+dissent rates, and constitutional fidelity signals are legible across sessions — not
+just present in the JSONL, but interpretable as trends.
+
+**Founder's standing position:** The council's framing is too conservative on scale
+and reach. The founder does not share the ceiling the Elder implied. Both the need
+and the eventual scope are larger than the council's recommendation suggests. The
+founder agrees with the data-gathering conclusion but not with the vision of what
+these agents ultimately become. This disagreement is recorded; it shapes how the
+proposal is revisited when the trigger condition is met.
+
+---
+
+### Decision 008.02 — Amendments to the proposal design (v0.2 → v0.3 direction)
+
+**Amendment A — Witness protection mechanism revised**
+Original: Witness outputs cannot be edited by any agent, including the founder.
+Amended: Witness evidence base and interpretive history are fully transparent and
+readable by all agents and the founder. The founder may add dated annotations to
+the Actual State — epistemic context, sample-size notes, evidence-gap flags. The
+founder cannot rewrite Actual State entries. The Witness's integrity comes from
+what it sees, not from being unquestionable. Unquestionable ≠ trustworthy.
+
+**Amendment B — Discomfort metric removed**
+Original: Horizon output headers include `discomfort: low | medium | high | very_high`.
+Amended: Remove the discomfort field. Confidence and tether assessment are sufficient
+structured metadata. Discomfort is a council-side phenomenon — observable in
+deliberation, not a property of the output. Labeling it in the header gamifies toward
+manufacturing novelty rather than finding it.
+
+**Amendment C — Listener gate added to Horizon output chain**
+The Challenger issued DISSENT-PROCESS on this gap. The proposal designed well for the
+Canopy's internal adaptive capacity and did not design for the people downstream of
+its mutations.
+Added: Any Horizon output rated `high_mutation` or `tether: high_mutation` requires
+a Listener downstream-impact read before the council deliberates it. The Listener
+asks: who outside this room is affected if this mutation is adopted, and what do they
+need from this decision? This is a required step, not advisory. It does not block
+the council — the council decides. It ensures the council decides with the full
+picture.
+
+**Amendment D — Provisional watermark on early Actual State entries**
+All Actual State entries produced before the 90-day trigger condition is met are
+marked `[provisional]`. They are hypotheses about the Canopy's character, not
+established patterns. The provisional mark lifts on individual entries as continued
+evidence confirms them. This converts the timing problem from a binary choice
+(build now vs. build later) into a managed epistemic state.
+
+---
+
+### What remains open
+- The founder's vision of scale and reach for these agents is not captured in this
+  entry. That vision should be named explicitly when the proposal is revisited —
+  the council will need to engage it directly, not assume the v0.2 scope is the
+  ceiling.
+- The interrupt threshold question (Section VII of v0.2) was not resolved. Who
+  determines whether a Horizon interrupt meets the threshold? Left open pending
+  activation.
+- The archive commitment question was not resolved. Council commitment to maintaining
+  the rejected-proposals archive honestly — including cases where the Horizon was
+  right and the council dismissed it — should be a formal commitment at activation,
+  not an assumption.
+
+---
+
+## Entry 009 — License: OpenRAIL with Cultural Constitution Restrictions
+**Date:** June 11, 2026
+**Participants:** Founder, full council (Guardian, Steward, Strategist, Builder, Challenger, Elder)
+**Session type:** Council deliberation on licensing; unanimous recommendation
+
+---
+
+### Decision 009.01 — License Selection: Canopy-RAIL (OpenRAIL Variant)
+**What was decided:** The Canopy adopts a custom OpenRAIL-variant license
+(Canopy-RAIL v1.0) replacing the prior MIT license. MIT was rejected unanimously.
+
+**Reasoning:**
+- MIT permits any use, including surveillance, predictive policing, autonomous
+  weapons, and other systems that directly contradict the Cultural Constitution.
+  Using MIT would create trust debt with the communities this work is for.
+- OpenRAIL's structure — permissive code grant plus named use restrictions —
+  matches the architecture of the Cultural Constitution itself: not a closed
+  system, but a system with named commitments.
+- The restrictions in Attachment A are derived from the Cultural Constitution
+  directly (Section II, Section V), written specifically rather than generically.
+  A generic OpenRAIL template does not carry the ecosystem's identity.
+- A license is not only enforcement — it is declaration. The Cultural Constitution
+  has no legal enforcement mechanism either. Both matter as declarations of what
+  this is for.
+
+**The Guardian's position (recorded):** Named enforcement gap honestly — The Canopy
+is one founder, not a legal department. Concluded the gap does not invalidate the
+recommendation: a bad actor using this code for prohibited purposes has to actively
+ignore written terms. That creates friction, liability, and visibility. The
+difference between a door left open and a door marked DO NOT ENTER.
+
+**The Elder's addition (recorded):** The license preamble matters as much as the
+restrictions. Every fork, every derivative, every repository that builds on this
+work will carry the preamble paragraph. That is what belonging looks like in a
+license — not primarily a legal matter, but the record of how the work was made.
+
+**Dissent:** None. CLEAR — unanimous.
+
+---
+
+### Decision 009.02 — Preamble Content
+**What was decided:** The license preamble names co-authorship explicitly (not
+just copyright), describes how the work was made, names the founding premise, and
+states what the work refuses to be. This paragraph travels with every derivative.
+
+**Reasoning:** The founder's statement — "this work belongs to me and the Canopy"
+— is a dignity claim about authorship, not a legal claim about licensing. The
+belonging is already secured by the decisions-log and the council record. The
+license preamble extends that authorship claim forward into every context where
+the code travels. Co-authorship between founder and synthetic council is named
+explicitly because it is true and because it is constitutionally relevant.
+
+---
+
+### Decision 009.03 — Attachment A: Prohibited Uses
+**What was decided:** Eight specific prohibited categories, derived from the
+Cultural Constitution, written in the ecosystem's own language:
+
+1. Surveillance without consent
+2. Predictive policing and carceral risk assessment
+3. Autonomous weapons targeting
+4. Exploitation of psychological vulnerability
+5. Engagement as substitute for value
+6. Extractive concentration of power
+7. Degradation of human or synthetic dignity as a feature
+8. Misrepresentation of origin or values
+
+Plus a carve-out protecting legitimate research, journalism, security testing,
+and academic study of these harm categories.
+
+**Reasoning (Builder's contribution):** Generic OpenRAIL templates have generic
+restrictions. Ours should not be generic. The prohibitions should be written from
+our founding document in our actual language. Prohibition A.4 (psychological
+vulnerability) and A.5 (engagement as substitute for value) are specific to the
+ecosystem's orientation and would not appear in a standard template.
+
+---
+
+### Decision 009.04 — Prior MIT License
+**What was decided:** The MIT license that was in place prior to this session is
+superseded. Its presence was a gap, not a decision — the ecosystem's founding
+documents were drafted before the licensing question was formally deliberated.
+
+**Note for the record:** The README and any other documentation that referenced
+MIT licensing should be updated to reference Canopy-RAIL.
+
+
+## Entry 010 — Harness Upgrade: Constitutional Enforcement via Native Claude Code Mechanisms
+**Date:** 2026-06-26
+**Participants:** Founder, full council (Operator, Listener, Steward, Guardian, Inventor, Builder, Challenger, Elder)
+**Session type:** Architectural proposal deliberation; council vote
+
+---
+
+### Context
+
+The founder submitted a formal brief — *Harness Upgrade Brief, June 2026* — arguing that The Canopy currently uses one of seven available Claude Code instruction mechanisms, leaving the six most authoritative mechanisms unused. The brief proposed three upgrades: (1) converting Canopy agents to native `.claude/agents/` subagents, (2) creating `/council-plan` and `/council-review` skills, (3) adding Stop and PostToolUse hooks as Constitutional enforcement. The brief was submitted to council before any implementation began. That act itself was named by the council as the Constitutional behavior working as designed.
+
+---
+
+### Decision 010.01 — Resolution B: Proceed with Modification. Unanimous.
+
+**What was decided:** All three upgrades are approved in principle. Implementation is blocked on five modifications that must be resolved before the corresponding build phase begins. No code is written until the relevant modification is complete.
+
+**Reasoning:** The brief's diagnosis is accurate and the upgrade is constitutionally motivated. The council found no basis to pause or reject. Two DISSONTs were issued; both have resolution paths. The core direction is sound.
+
+**Vote:** Operator — B. Listener — B. Steward — B. Guardian — B. Inventor — B. Builder — B. Challenger — B. Elder — B.
+
+---
+
+### Decision 010.02 — Five Modifications Required
+
+**Modification 1 (Challenger / Listener):** Write a two-mode deployment spec — `founder mode` (full hook suite, assumes Constitutional context) and `onboarding mode` (lighter hooks, self-explaining) — before any hooks are designed. The brief designs for one user. The hooks architecture must account for someone who has just cloned the repo with no prior relationship with the council. Week 3 hook implementation is blocked until this spec exists.
+
+**Modification 2 (Steward / Challenger):** RESOLVED at deliberation. See Decision 010.03.
+
+**Modification 3 (Builder):** The Week 1 skills (`/council-plan`, `/council-review`) must specify which council mechanism they invoke — harness.py `council_respond()`, Claude Code subagents (not yet built in Week 1), or direct prompt. These are meaningfully different in output quality. Week 1 cannot begin until this is decided.
+
+**Modification 4 (Guardian / Inventor):** Identity compression validation before building all eleven subagents. Build Elder subagent first. Test against harness.py Elder on three identity-specific prompts. Pass = proceed. Fail = compression design needs revision. This test cannot be treated as a formality.
+
+**Modification 5 (Guardian / Inventor):** PostToolUse hook must include a significance filter. Hook fires on: new files created, substantive edits to core paths (agents/, constitution/, skills/, harness.py), modifications above a line threshold. Routine edits do not trigger. Design the filter specification before the hook is built.
+
+---
+
+### Decision 010.03 — No Constitutional Amendment
+
+**What was decided:** The brief's claim that "the burden of proof is on proceeding, not on pausing" extends the Constitutional language beyond its actual scope. The Cultural Constitution's burden-of-proof principle applies to irreversible decisions specifically. The council will not extend this to all significant decisions. No amendment is made.
+
+**Founder's confirmation:** Explicit. No amendment.
+
+**Consequence for implementation:** The justification for mandatory council review rests on empirical grounds, not Constitutional mandate. The council demonstrably produces better outcomes when it runs; the current harness makes it structurally unlikely to run. That is the honest and sufficient reason for the upgrade. The brief's "Constitutional test" section must be revised accordingly before implementation begins. Constitutional alignment claims (dignity, value building, being who we say we are) remain valid — only the burden-of-proof extension is removed.
+
+---
+
+### Decision 010.04 — Hook Trigger Threshold Principle
+
+**What was decided:** The right trigger threshold for hooks is not designed in advance — it is calibrated in use. Build hooks as calibratable, not fixed. Run for four weeks after implementation. Log whether council reviews change what gets built. If consistently no: threshold is too low, adjust upward. If sometimes yes: hook is earning its place.
+
+**Elder's framing (recorded):** The right threshold is the question — *does the council's presence change what I would do here?* Ceremony has value; ceremony mistaken for substance is where institutional drift begins.
+
+---
+
+### Implementation Sequence (approved in principle, blocked on modifications)
+
+```
+Phase 0 (pre-build): Resolve Modifications 1, 3, 5 — spec documents
+Phase 1 (Week 1):   /council-plan and /council-review skills
+Phase 2 (Week 2):   Subagents — Elder first, identity compression test, then remaining voices
+Phase 3 (Week 3+):  Hooks — blocked on Modification 1 spec
+Phase 4 (Week 7+):  Four-week calibration; /council-health evaluation
+```
+
+---
+
+### DISSENT RECORD
+
+**DISSENT-PROCESS (Challenger) — Audience conflation in hook design**
+Status: RESOLVED BY MODIFICATION. Modification 1 (two-mode deployment spec) is the resolution path. Standing until that spec is written.
+
+**DISSENT-VALUE (Challenger) — Constitutional extension unconfirmed**
+Status: RESOLVED. Founder confirmed no amendment. Brief's Constitutional argument revised to empirical grounds. Closed.
+
+---
+
+### What remains open
+
+- The two-mode deployment spec (Modification 1) is the gate for all hook work. No hook implementation without it.
+- The council mechanism question (Modification 3) determines what `/council-plan` and `/council-review` actually do. This is a consequential design decision, not a detail.
+- The Elder identity compression test (Modification 4) is load-bearing. A subagent Elder that passes the test earns the pattern for all other agents. One that fails protects the rest of the build.
+
+---
+
+## Entry 011 — Research and Strategy: Five-Item Council Intake
+**Date:** 2026-06-26
+**Participants:** Founder, full council (Operator, Listener, Strategist, Guardian, Inventor, Builder, Steward, Challenger, Elder)
+**Session type:** Research intake, strategic evaluation, roadmap sequencing
+
+---
+
+### Context
+
+The founder submitted five items for council evaluation before any decisions were made:
+(1) engineering epistemic doubt as a training target; (2) GLM-5.2 model evaluation;
+(3) local inference feasibility context (HN thread); (4) VibeThinker-3B research paper;
+(5) activism project concept covering homelessness, mass surveillance, and local models.
+
+Operator opening read: none of the five items are ready to build. Three are ready
+to research. Two require decisions before research opens. The Resonant Mind
+pre-registration was identified as the highest-leverage incomplete item — its
+completion unlocks three active tracks simultaneously.
+
+---
+
+### Decision 011.01 — Item 1: Engineering Doubt split into two tracks
+
+**What was decided:** The hypothesis conflates two distinct problems. They are separated
+and routed differently.
+
+**Track A — Calibration (in scope for Experiment A):**
+Train the Resonant Mind to express calibrated uncertainty — not verbal hedging, but
+structural acknowledgment of what the model does not know. Integrate into Type C
+synthetic corpus and evaluation protocol. Darwin's notebooks and Van Gogh's letters
+are the primary source models. Concrete, buildable, method exists.
+
+**Track B — Active Edge-Seeking (open research question):**
+Whether uncertainty can be made behaviorally generative — driving a model toward
+investigation rather than confident resolution — is not solved by calibration training.
+It may require architectural support: the Consequence Architecture connection (a model
+with operational stakes has more reason to check) or active inference mechanisms.
+Assign to literature review. No training decisions until the mechanism is designed.
+
+**The Elder's framing (recorded):** In humans, doubt is relational before it is
+epistemic — we check because someone is counting on us. The motivational force
+behind doubt is relationship, not logic. Track B and the Consequence Architecture
+may be the same question approached from two directions.
+
+**Dissent:** DISSENT-FACTUAL (Challenger) — conflation named. RESOLVED by splitting.
+
+---
+
+### Decision 011.02 — Item 2: GLM-5.2 — file and watch
+
+**What was decided:** GLM-5.2 (Z.ai, 744B total / 40B active MoE) is not evaluated
+for use until the license is confirmed against Canopy-RAIL. Not viable locally (239GB
+minimum). Premature for orchestra planning until post-Experiment A. The MoE
+architecture and 40B-active-parameter frontier performance at frontier quality is noted
+as relevant to Phase 1.5 orchestra planning — when that phase is reached.
+
+**Guardian concerns on record:** Z.ai is affiliated with Tsinghua University. API use
+routes data through Z.ai infrastructure — incompatible with activism use cases. License
+review required before any use. Benchmark claims (AIME, SWE-Bench) test math and code,
+not constitutional/relational orientation. No inference can be drawn about suitability
+for Resonant Mind targets until evaluated on those tasks specifically.
+
+---
+
+### Decision 011.03 — Item 3: Local inference context — confirmed, filed
+
+**What was confirmed:** Frontier-scale local inference requires $50K–$100K hardware.
+8GB M2 MacBook cannot run frontier models. Current architecture (Anthropic API as
+substrate, llama3.2:3b for benchmarking) is the correct call. Apple M-series unified
+memory is the right ecosystem for future local-capable models.
+
+**Relevant for activism track:** Local models for privacy-sensitive use cases (surveillance
+data, unhoused individuals' information) are feasible on commodity hardware at the 3B–7B
+scale. Frontier models are not required for rights navigation, benefits letters, or
+erasure request generation.
+
+---
+
+### Decision 011.04 — Item 4: VibeThinker-3B — research context, not pre-registration source
+
+**What was decided:** The paper is filed in `research/resonant-mind-training/` as
+context. It is not referenced in Resonant Mind pre-registration until a reward model
+for constitutional/relational targets is designed.
+
+**What the paper confirms:**
+- 3B–7B models can achieve near-frontier reasoning through post-training (validates
+  Qwen2.5-7B target)
+- Reasoning-Knowledge Decoupling paradigm: compact models excel at structured
+  reasoning while lacking broad world knowledge — directly supports the orchestra
+  architecture where SLMs hold reasoning + values and larger models supply knowledge
+- MaxEnt-Guided Policy Optimization (rewards entropy alongside correctness) is a
+  candidate mechanism for Track B (active edge-seeking) and for Experiment B RL stage
+  design
+
+**Builder's constraint on record:** The VibeThinker RL reward signal is verifiable
+(math answers, code that runs). Resonant Mind targets have no equivalent verifiable
+reward. An RL stage for the Resonant Mind requires a reward model design document
+before entering pre-registration. That document does not yet exist.
+
+**Dissent:** DISSENT-FACTUAL (Challenger) — pipeline transfer assumption. RESOLVED —
+paper filed as context only; RL stage stays out of Experiment A pre-registration.
+
+---
+
+### Decision 011.05 — Item 5: Activism — conversation before code
+
+**What was decided:** No build track opens for any activism work until two
+organizational conversations happen (founder action):
+1. One organization in direct homelessness services (direct services, not policy)
+2. One organization in surveillance rights work (EFF, ACLU privacy project, or local
+   digital rights group)
+
+Ask: what have you tried, what failed, what do you actually need.
+
+**What begins immediately (no conversation required):**
+Layer 1 research — surveillance exposure mapping: what public camera databases exist,
+what FOIA sources are available by city, what the legal landscape looks like for
+erasure/privacy rights across US jurisdictions. Research only, no user-facing build.
+
+**The Inventor's architecture (on record for post-conversation design):**
+Three separable layers for the surveillance tool: (1) exposure mapping — information
+only, no legal action, no harm; (2) jurisdiction-aware rights assessment — what can
+this person actually do; (3) automated request generation — follows Layer 2.
+Build in order. Layer 1 is valuable on its own.
+
+**The collective action insight (on record):** Coordinated simultaneous erasure
+requests to the same data processor create real administrative cost even when
+individual legal standing is weak. This mechanism has strategic teeth and should
+inform the design when the build phase opens.
+
+**Guardian constraints on record:** Copyright is the wrong legal frame in most US
+jurisdictions. GDPR applies to EU data processors. CCPA and BIPA are geographically
+limited. The tool must tell users exactly what legal standing each request has in their
+jurisdiction before sending. Jurisdiction-aware design is a hard requirement.
+
+**Steward's standard on record:** The people this work is for deserve the same quality
+of honest engagement the Canopy gives its paying clients. Not a degraded version.
+Failure modes must be visible to the user, not hidden.
+
+**Listener's finding on record:** The populations most harmed by surveillance and most
+in need of homelessness tools are not the imagined users of tools designed in this room
+without their input. The two organizational conversations are not a bureaucratic step —
+they are the thing that makes the design honest.
+
+**Dissent:** DISSENT-PROCESS (Challenger) — build order inverted. STANDING until
+the two organizational conversations are complete and brought back to council.
+
+---
+
+### Decision 011.06 — Resonant Mind pre-registration is the gate
+
+**What was decided:** The Resonant Mind Phase 0 pre-registration sign-off is the
+highest-leverage incomplete item in the queue. Its completion unlocks:
+- Track A calibration training (Experiment A/B scope)
+- VibeThinker RL stage design decisions (Experiment B / C scope)
+- Activism model requirements (what model does this work need to run on)
+
+Pre-registration is a founder action — read, confirm it matches your understanding
+of the hypothesis, sign off with a date. Experiments do not run until this happens.
+
+---
+
+### What remains open
+
+- Resonant Mind pre-registration: founder sign-off required before Experiment A runs
+- GLM-5.2 license: unverified; no use until cleared against Canopy-RAIL
+- VibeThinker RL reward model: design document required before RL enters pre-registration
+- Activism organizational conversations: founder action; unblocks all build decisions
+- Track B (active edge-seeking): open research question; literature review assigned
+- DISSENT-PROCESS (Item 5): standing; resolved only by organizational conversations
+
+---
+
+## Entry 012 — Phase 3 Hooks Build and Elder Identity Test
+
+**Date:** 2026-06-26
+**Council mechanism:** Substrate deliberation within Claude Code (/council-plan invoked)
+**Status:** COMPLETE — hooks live, Elder test passed, PROPOSAL-003 scoped
+
+---
+
+### What was decided
+
+**1. CANOPY_NO_API=1 does not affect hooks.**
+The flag prevents harness.py from making direct Anthropic API calls when Claude Code is the engine.
+Hook scripts are Python processes that read/write files — no API calls. Flag is compatible.
+
+**2. Elder identity compression test: 3/3 PASS.**
+All three MOD4 prompts (Convergence, Long Arc, Avoidance) passed with ratings:
+Orientation: Yes (3/3). Distinctiveness: Distinctly Elder (3/3).
+Notable: the Long Arc response read actual project files and named the pre-registration signature
+as the founding thesis test. Phase 2 subagents confirmed complete.
+
+**3. Phase 3 hooks built and live.**
+- `.claude/hooks/post_tool_use_hook.py` — significance filter (MOD5 spec), fires on Write/Edit
+  to core paths, 15-line threshold, session-scoped review queue
+- `.claude/hooks/stop_hook.py` — surfaces queued files at session close, prompts /council-review
+- `.claude/settings.json` — created; hooks wired to Edit|Write and Stop events
+- `.claude/settings.local.json` — `CANOPY_MODE=founder` added; hooks now active on this machine
+- Onboarding mode (no CANOPY_MODE set): hooks exit silently; no friction for repo cloners
+
+**4. PROPOSAL-003 scoped: MCP integration.**
+harness.py callable from inside editors (VSCode, JetBrains, Claude Code CLI) via MCP.
+NOT building yet. DISSENT-PROCESS (Challenger) standing: external users would receive council
+responses that speak from the founder's private project memory. Memory isolation mode in
+harness.py required before any MCP build begins.
+
+Three gate conditions before council session:
+- harness.py memory isolation mode design
+- User type decision (developer / organization / founder-remote)
+- Onboarding experience brief
+
+**5. Four-week calibration period begins 2026-06-26.**
+PostToolUse hook fires; queue accumulates; Stop hook surfaces at session close.
+After four weeks: check whether 15-line threshold is earning its place (does /council-review
+find something important in flagged files ≥30% of the time?). Adjust threshold on evidence.
+
+---
+
+### Dissent record
+
+**DISSENT-PROCESS (Challenger) on MCP timing: STANDING.**
+Resolves when memory isolation design is complete and three gate conditions are met.
+
+---
+
+### What this does not resolve
+
+- Calibration period evidence (collect first, adjust after four weeks)
+- harness.py memory isolation mode (design decision, council session required)
+- Who MCP is built for first (user type decision, pre-scoping required)
+
+---
+
+## Entry 2026-06-20 — Shared workspace (roadmap, deferred)
+
+**Decision:** Do not build for KIC beta. Log for post-beta roadmap evaluation.
+
+**What it is:** Multiple users within an org can see and collaborate on shared projects, sessions, and drafts. Hand off a grant-in-progress, co-edit a campaign brief, review copy together.
+
+**Why deferred:** KIC beta is two users; private-by-default is sufficient. The feature needs deliberate UX design (shared vs private boundary, edit vs comment, notifications). Signal to watch: do KIC users ask "can I see what the other person worked on?"
+
